@@ -24,8 +24,11 @@
                     <div class="col-md-12">
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
                          @include('error.note')
 >>>>>>> tuananh
+>>>>>>> devolopment
                         <form role="form" method="post">
 
                             <div class="form-group">
@@ -37,7 +40,11 @@
                                 <label>Giá trị</label>
                                     @foreach ($attlist as $attvalue)
                                         <input class="form-control" type="hidden" required="" name="idatt[]" value="{{ $attvalue->att_value_id }}">
+<<<<<<< HEAD
+                                        <input class="form-control" type="text" required="" name="name_id[{{ $attvalue->att_value_id }}]" value="{{ $attvalue->att_value }}">
+=======
                                         <input class="form-control" type="text" required="" name="name_id[]" value="{{ $attvalue->att_value }}">
+>>>>>>> devolopment
                                     @endforeach
                             </div>
                             <div class="form-group">

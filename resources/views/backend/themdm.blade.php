@@ -31,13 +31,21 @@
                                 <label>Tên danh mục</label>
                                 <input class="form-control" type="text" required="" name="ten_dm">
                             </div>
+<<<<<<< HEAD
+                           {{--  <div class="form-group">
+=======
                             <div class="form-group">
+>>>>>>> devolopment
                                         <label>Danh mục cha</label>
                                         <select name="dm_cha" class="form-control">
                                             <option value="0" selected>Lựa chọn danh mục</option>
                                             {{  cate_parent($parent) }}
                                         </select>
+<<<<<<< HEAD
+                            </div> --}}
+=======
                             </div>
+>>>>>>> devolopment
                             <div class="form-group">
                                 <label>Ảnh danh mục</label>
                                 <input  id="img" type="file" name="img" class="form-control hidden" onchange="changeImg(this)">

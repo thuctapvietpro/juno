@@ -15,34 +15,37 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['namespace'=>'Admin'],function(){
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
-=======
+
+	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
+
 
 	Route::group(['prefix'=>'login'],function(){
->>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
-=======
+
 	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
->>>>>>> tuananh
+
 		Route::get('/','LoginController@getLogin');
 		Route::post('/','LoginController@postLogin');
 	});
 	Route::get('logout','HomeController@getLogout');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
 		Route::get('home','HomeController@getHome');
 		
-=======
+
+	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
+		Route::get('home','HomeController@getHome');
+		
+
 	Route::group(['prefix'=>'admin'],function(){
 		Route::get('home','HomeController@getHome');
 		
-=======
+
 	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
 		Route::get('home','HomeController@getHome');
 		
->>>>>>> tuananh
+
 		//Account
 		Route::group(['prefix'=>'account'],function(){
 			Route::get('/','AccountController@getAccount');
@@ -55,8 +58,7 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','AccountController@getDeleteAccount');
 		});
-<<<<<<< HEAD
->>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
+
 		//Comment
 		Route::group(['prefix'=>'comment'],function(){
 			Route::get('/','CommentController@getComment');
@@ -65,8 +67,6 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','CommentController@getDeleteComment');
 		});
-<<<<<<< HEAD
-=======
 		//Category
 		Route::group(['prefix'=>'category'],function(){
 			Route::get('/','CategoryController@getCategory');
@@ -80,6 +80,10 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','CategoryController@getDeleteCategory');
 		});
+		
+	});
+});
+
 		//Attribute
 		Route::group(['prefix'=>'attribute'],function(){
 			Route::get('/','AttributeController@getAttribute');
@@ -102,11 +106,11 @@ Route::group(['namespace'=>'Admin'],function(){
 			Route::get('delete/{id}','BillController@getDeleteBill');
 
 		});
->>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
+
 	});
 });
-=======
+
 		
 	});
 });
->>>>>>> tuananh
+
