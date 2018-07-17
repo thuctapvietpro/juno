@@ -29,6 +29,10 @@ class AddAttributeRequest extends FormRequest
             'gt.unique:attribute_values,att_value'
         ];
     }
+    /**
+     * Return the message 
+     * @return array
+     */
     public function messages(){
         return [
             //
