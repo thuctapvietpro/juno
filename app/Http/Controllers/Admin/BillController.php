@@ -11,10 +11,8 @@ use DB;
 class BillController extends Controller
 {
     /**
-     * Đổ dữ liệu đơn hàng ra ngoài view
-     * @param App\Models\Bills;
-     * @param DB; xây đựng chức năng phân trang paginate
-     *@return view đơn hàng.
+     * [ bills description]
+     * @return \Illuminate\View\View
      */
     public function getBill()
     {
@@ -23,14 +21,12 @@ class BillController extends Controller
     	return view('backend.bill',$data);
     }
 
+    
     /**
-     * Đổ dữ liệu chi tiết đProductsơn hàng ra ngoài view
-     * @param App\Models\Products;
-     * @param App\Models\BillDetails;
-     *@param $id; id trong bảng đơn hàng
-     *@return view chi tiết đơn hàng.
+     * description edit in the bill details
+     * @param  $id
+     * @return \Illuminate\View\View
      */
-
     public function getEditBill($id)
     {
     	$arr['detaillist'] = BillDetails::find($id);
@@ -43,12 +39,10 @@ class BillController extends Controller
     }
 
     /**
-     * Xóa dữ liệu trong bảng đơn hàng
-     * @param App\Models\Bills;
-     *@param $id;
-     *@return view đơn hàng.
+     * description delete in the bill
+     * @param  $id;
+     * @return \Illuminate\View\View
      */
-
     public function getDeleteBill($id)
     {
     	Bills::destroy($id);
