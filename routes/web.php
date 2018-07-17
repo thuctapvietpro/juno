@@ -17,35 +17,12 @@ Route::get('/', function () {
 Route::group(['namespace'=>'Admin'],function(){
 
 	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
-
-	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
-
-
-	Route::group(['prefix'=>'login'],function(){
-
-	Route::group(['prefix'=>'login','middleware'=>'CheckLogedIn'],function(){
-
 		Route::get('/','LoginController@getLogin');
 		Route::post('/','LoginController@postLogin');
 	});
 	Route::get('logout','HomeController@getLogout');
-
 	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
-		Route::get('home','HomeController@getHome');
-		
-
-	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
-		Route::get('home','HomeController@getHome');
-		
-
-	Route::group(['prefix'=>'admin'],function(){
-		Route::get('home','HomeController@getHome');
-		
-
-	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
-		Route::get('home','HomeController@getHome');
-		
-
+	Route::get('home','HomeController@getHome');
 		//Account
 		Route::group(['prefix'=>'account'],function(){
 			Route::get('/','AccountController@getAccount');
@@ -67,6 +44,7 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','CommentController@getDeleteComment');
 		});
+
 		//Category
 		Route::group(['prefix'=>'category'],function(){
 			Route::get('/','CategoryController@getCategory');
@@ -106,10 +84,6 @@ Route::group(['namespace'=>'Admin'],function(){
 			Route::get('delete/{id}','BillController@getDeleteBill');
 
 		});
-
-	});
-});
-
 		
 	});
 });
