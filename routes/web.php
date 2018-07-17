@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['namespace'=>'Admin'],function(){
+
 	Route::group(['prefix'=>'login'],function(){
 		Route::get('/','LoginController@getLogin');
 		Route::post('/','LoginController@postLogin');
@@ -68,6 +69,15 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','AttributeController@getDeleteAttribute');
 			Route::get('deletevalue/{id}','AttributeController@getDeleteAttValue');
+
+	Route::group(['prefix'=>'admin'],function(){
+		Route::group(['prefix'=>'bill'],function(){
+			Route::get('','BillController@getBill');
+
+			Route::get('edit/{id}','BillController@getEditBill');
+
+			Route::get('delete/{id}','BillController@getDeleteBill');
+
 		});
 	});
 });
