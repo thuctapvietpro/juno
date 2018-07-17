@@ -22,6 +22,10 @@
                 <div class="panel-heading">Thêm thuộc tính</div>
                 <div class="panel-body">
                     <div class="col-md-12">
+<<<<<<< HEAD
+=======
+                         @include('error.note')
+>>>>>>> tuananh
                         <form role="form" method="post">
 
                             <div class="form-group">
