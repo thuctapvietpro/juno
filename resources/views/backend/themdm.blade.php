@@ -31,12 +31,14 @@
                                 <label>Tên danh mục</label>
                                 <input class="form-control" type="text" required="" name="ten_dm">
                             </div>
+
                             <div class="form-group">
                                         <label>Danh mục cha</label>
                                         <select name="dm_cha" class="form-control">
                                             <option value="0" selected>Lựa chọn danh mục</option>
                                             {{  cate_parent($parent) }}
                                         </select>
+
                             </div>
                             <div class="form-group">
                                 <label>Ảnh danh mục</label>

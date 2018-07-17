@@ -70,7 +70,7 @@ return [
             'model' => App\Models\Account::class,
         ],
 
-        // 'users' => [
+        // 'users' => [ 
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
