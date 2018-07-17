@@ -35,9 +35,23 @@
             <ul class="user-menu">
                 <li class="dropdown pull-right">
 
+<<<<<<< HEAD
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span style="color: white;">Xin chào, {{ Auth::user()->user_name}}</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Thông tin thành viên</a></li>
+=======
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span style="color: white;">Xin chào,
+                     {{-- {{ Auth::user()->user_name}} --}}
+                 </span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Thông tin thành viên</a></li>
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span style="color: white;">Xin chào, {{-- {{ Auth::user()->user_name}} --}}</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{ asset('admin/account') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Thông tin thành viên</a></li>
+
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
                         <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Cài đặt</a></li>
                         <li><a href="{{ asset('logout') }}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Đăng xuất</a></li>
                     </ul>
@@ -57,12 +71,20 @@
     <ul class="nav menu">
         <li class="active"><a href="{{ asset('admin/home') }}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Trang chủ quản trị</a></li>
         <li class="parent ">
+<<<<<<< HEAD
             <a href="#">
+=======
+            <a href="{{ asset('admin/account') }}">
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
                 <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý thành viên
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li>
+<<<<<<< HEAD
                     <a href="#">
+=======
+                    <a href="{{ asset('admin/account/add') }}">
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg>
                         Thêm mới
                     </a>
@@ -78,11 +100,19 @@
                     <a class="" href="#">
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Danh sách sản phẩm
                     </a>
+<<<<<<< HEAD
                     <a class="" href="#">
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Thuộc tính sản phẩm
                     </a>
                     <li>
                         <a href="#">
+=======
+                    <a class="" href="{{ asset('admin/attribute') }} ">
+                        <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Thuộc tính sản phẩm
+                    </a>
+                    <li>
+                        <a href="{{ asset('admin/category') }}">
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
                             <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Danh mục sản phẩm
                         </a>
                     <li>
@@ -111,17 +141,38 @@
         </li>
 
         <li class="parent ">
+<<<<<<< HEAD
+=======
+
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
             <a href="#">
                 <span data-toggle="collapse" href="#sub-item-5"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý đơn hàng
             </a>
             <ul class="children collapse" id="sub-item-5">
+<<<<<<< HEAD
+=======
+
+            <a href="{{ asset('admin/bill') }}">
+                <span data-toggle="collapse" href="#sub-item-5"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý đơn hàng
+            </a>
+            {{-- <ul class="children collapse" id="sub-item-5">
+
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
                 <li>
                     <a class="" href="#">
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Thêm mới
                     </a>
                 </li>
 
+<<<<<<< HEAD
             </ul>			
+=======
+
+            </ul>			
+
+            </ul>	 --}}		
+
+>>>>>>> a65febe009ac81561888eb37e1856c143d7d8292
         </li> 
 
         {{-- <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"/></svg> Cấu hình</a></li> --}}
