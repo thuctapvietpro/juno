@@ -36,7 +36,7 @@
             <ul class="user-menu">
                 <li class="dropdown pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg><span style="color: white;">Xin chào,
-                     {{-- {{ Auth::user()->user_name}} --}}
+                     {{ Auth::user()->user_name}}
                  </span> <span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ asset('admin/account') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Thông tin thành viên</a></li>
@@ -58,7 +58,7 @@
     </form>
     <ul class="nav menu">
         <li class="active"><a href="{{ asset('admin/home') }}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Trang chủ quản trị</a></li>
-        <li class="parent ">
+            <li class="parent">
             <a href="{{ asset('admin/account') }}">
                 <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý thành viên
             </a>
@@ -72,18 +72,14 @@
             </ul>			
         </li>
         <li class="parent ">
-            <a href="#">
+            <a href="{{asset('admin/home')}}">
                 <span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý sản phẩm
             </a>
             <ul class="children collapse" id="sub-item-2">
                 <li>
-                    <a class="" href="#">
+                    <a class="" href="{{asset('admin/home')}}">
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Danh sách sản phẩm
                     </a>
-                    <a class="" href="#">
-                        <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Thuộc tính sản phẩm
-                    </a>
-               
                     <a class="" href="{{ asset('admin/attribute') }} ">
                         <svg class="glyph stroked plus sign"><use xlink:href="#stroked-plus-sign"/></svg> Thuộc tính sản phẩm
                     </a>
@@ -97,7 +93,7 @@
             </ul>				
         </li>
         <li class="parent ">
-            <a href="#">
+            <a href="{{asset('admin/home')}}">
                 <span data-toggle="collapse" href="#sub-item-3"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Thư viện ảnh
             </a>
             <ul class="children collapse" id="sub-item-3">
@@ -118,7 +114,7 @@
 
         <li class="parent ">
 
-            <a href="#">
+            <a href="{{asset('admin/home')}}">
                 <span data-toggle="collapse" href="#sub-item-5"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý đơn hàng
             </a>
             <ul class="children collapse" id="sub-item-5">

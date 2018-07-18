@@ -22,7 +22,7 @@ Route::group(['namespace'=>'Admin'],function(){
 	});
 	Route::get('logout','HomeController@getLogout');
 	Route::group(['prefix'=>'admin','middleware'=>'CheckLogedOut'],function(){
-	Route::get('home','HomeController@getHome');
+		Route::get('home','HomeController@getHome');
 		//Account
 		Route::group(['prefix'=>'account'],function(){
 			Route::get('/','AccountController@getAccount');
@@ -58,9 +58,6 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','CategoryController@getDeleteCategory');
 		});
-		
-	});
-});
 
 		//Attribute
 		Route::group(['prefix'=>'attribute'],function(){
@@ -74,17 +71,17 @@ Route::group(['namespace'=>'Admin'],function(){
 
 			Route::get('delete/{id}','AttributeController@getDeleteAttribute');
 			Route::get('deletevalue/{id}','AttributeController@getDeleteAttValue');
+		});
 
-	Route::group(['prefix'=>'admin'],function(){
+		//bill
 		Route::group(['prefix'=>'bill'],function(){
 			Route::get('','BillController@getBill');
 
 			Route::get('edit/{id}','BillController@getEditBill');
 
 			Route::get('delete/{id}','BillController@getDeleteBill');
-
-		});
-		
+		});		
 	});
 });
+
 

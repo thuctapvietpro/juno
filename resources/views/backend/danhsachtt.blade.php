@@ -7,7 +7,6 @@
         var conf=confirm("Bạn có chắc chắn muốn xóa giá trị này hay không?");
         return conf;
     }
-
 </script>
 @extends('backend.master')
 @section('main')

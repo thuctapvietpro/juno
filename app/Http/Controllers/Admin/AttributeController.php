@@ -59,14 +59,9 @@ class AttributeController extends Controller
      * @return \Illuminate\View\View
      */
     public function getEdittAttribute($id){
-        // $data['att']= Attribute::find($id);
-        // $value['attvalue']= Attribute::with('value')->get();
         $data['att']= Attribute::find($id);
-        // $data1['attvaluelist'] = AttributeValue::find($id);
         $data1['attlist'] = Attribute::find($id)->value;
-        // dd($data1);
-         return view('backend.suatt',$data,$data1);
-        //dd($value);
+        return view('backend.suatt',$data,$data1);
     }
   
     /**
@@ -98,7 +93,6 @@ class AttributeController extends Controller
             $attvalue = new AttributeValue;
             $attvalue->att_value =$value;
             $attvalue->att_id = $id;
-            // $attvalue->att_id = $request->att_id;
             $attvalue->save(); 
             }
         }
